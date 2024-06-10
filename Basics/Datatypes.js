@@ -1,3 +1,14 @@
+// We know that there are two type of Datatype:-
+//  Primitive and Non-Primitive :- This are classified on the basis of How an variable is stored on basis of value or
+//  call by reference where the refrence is send to the user or operator.
+//   All Primitive Datatype are call by value means for an operation it gives us a copy of a variable but 
+//  not the actual reference block.Ex :- String,Numbers,Boolean,Null(Means empty not 0),Undefined,Symbol,BigInt
+
+// All Reference type or Non-Primitive Datatype in which user is given the actual refrence of the block or variable
+// Ex :- Array,Objects,Functions
+
+
+
 "use strict"  // means it lets us use all newwer version means new syntaxs and variables
 // when we are using browser we have write alert(3 + 6) then this will get shown in browser but we uses 
 // node.js in which we don't have to write this
@@ -5,11 +16,9 @@
 //  boolean string with only "" 
 // to know the type of any variable we use typeof
 console.log(typeof null);
-// now interview remember type of null is considered as ObJECT
+// now In interview remember type of null is considered as ObJECT
 console.log(typeof undefined);
 // undefined is itself a type or its same
-
-
 
 
 // Now to convert any data type into other we Use,
@@ -44,3 +53,10 @@ console.log(numberInScore);
 let stringnumber = String(scorenumber)
 console.log(stringnumber);
 // 89 which an number convert to a string variable 89
+
+
+// ****************OPERATIONS*****************************************
+// Now to make any number into negative number we use
+let value = 87
+let Negvalue = -value
+console.log(Negvalue);   // it will print negative values then
