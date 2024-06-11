@@ -4,10 +4,16 @@
 //   All Primitive Datatype are call by value means for an operation it gives us a copy of a variable but 
 //  not the actual reference block.Ex :- String,Numbers,Boolean,Null(Means empty not 0),Undefined,Symbol,BigInt
 
+const Id = Symbol('1,23,4')
+const  anotherId = Symbol('1,23,4')
+// Now this variables are different but values are same but this Symbol function makes them different even though its 
+      //      value is same
+// console.log(Id === anotherId);
+
 // All Reference type or Non-Primitive Datatype in which user is given the actual refrence of the block or variable
 // Ex :- Array,Objects,Functions
 
-
+// Javascript is an Dynamic type 
 
 "use strict"  // means it lets us use all newwer version means new syntaxs and variables
 // when we are using browser we have write alert(3 + 6) then this will get shown in browser but we uses 
@@ -60,3 +66,18 @@ console.log(stringnumber);
 let value = 87
 let Negvalue = -value
 console.log(Negvalue);   // it will print negative values then
+
+console.log(Id === anotherId);
+
+
+//    BigInt Datatype
+// BigInt channels = 34959849385629075230
+// console.log(channels);
+
+
+//  Objects are always inside curly brackets
+let myobject = {
+        Name: "Samyak"
+       , age: 19
+}
+console.log(myobject);
