@@ -84,3 +84,44 @@ console.log(Price.toLocaleString());  // This will automatically arrange the num
 
 // To arrange the number accord to Indian way we use 'en - IN'
 console.log(Price.toLocaleString('en-IN')); // here its arranged as 1 crore
+
+//*********************************** MATH ****************************************/
+
+console.log(Math.abs(-45645));
+console.log(Math.round(4.6));
+console.log(Math.ceil(4.7));   // This will round off it to the highest value = 5
+console.log(Math.floor(4.7));   // This will round off it to the lowest value = 4
+
+// to find minimum and maximum value
+console.log(Math.min(4 , 5 , 6 , 10));
+console.log(Math.max(44 , 65 , 0.5 , 10));
+
+// there is an random() in this will give any value btw 0 to 1
+console.log(Math.random(7));
+console.log(Math.random(7) * 10);  // Now the values will be btw 0 to 100
+
+// now to avoid the case of 0.000 this value we add 1 into the random() so that this value doesn't appear
+console.log((Math.random()*10) + 1);
+ 
+// Special case if we have mention min and max values and we don't want any Zero values for that we use formula 
+// (max - min + 1) this avoids any zero values like 0.00
+const max = 20
+const min = 10
+console.log(Math.random())
+// Now for non decimal values we will use floor()
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);  // here we added min to get minimun 10 as min value
+// And then the values can be random from 10 to 20
+
+
+
+
+
+ 
+
+
+
+
+
+
+
