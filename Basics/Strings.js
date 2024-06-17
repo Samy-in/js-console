@@ -1,3 +1,5 @@
+//  *********** STRING INTERPOLATION ************
+
 // here remember this in console execution happens from left to right 
 // then if first expression is string and after that there is a number then its treated as a string as whole together
 let str1 = "You merely abopted the darkness "
@@ -14,8 +16,8 @@ console.log(5+ 6+ "1");   // Now this we print 111 becoz first operations will e
 
 let sAlary = 40000;
 let position = "software developer engineer-2"
-// now we use backticks (``) in which there is an string interpolation
-    // in which we make place holders to  inject the variables in it
+// now we use backticks (``) in which  is an string interpolation
+    // in which we make place holders to inject the variables in it
 
 console.log(`I'm an Employee at amazon working at ${position} role with salary of ${sAlary}`);
 
