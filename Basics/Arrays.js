@@ -79,8 +79,12 @@ console.log(Array.from("Samyak"));  // This converts any value into array  of ch
 //             But What Happens when we give an object as a input in array
 console.log(Array.from({name : "Samyak"})); // This will gives us an empty value becoz it can interpret it
 
+// When we want to convert a assign variable into an array we use .of( mention the variable we want to be as array element)
+let score = 234
+let score1 = 456
+let score3 = 56897
 
-
+console.log(Array.of(score , score1, score3)); // Now these values are in a array
 
 
 
