@@ -133,11 +133,25 @@ console.log(JsUser.hasOwnProperty('lastloginDays'))  // it return a boolean valu
 
 // We use this above method to prevent crashing the database if the given is not present then database will face crash
 
+                      // Object destructuring and JSON (means anything inside {} these brackets is JSON) API
 
+const Euros2024 = {
+         Teamname : "Portugal",
+        Winprice : 100 + "Million",
+        OppenentTeam : "Germany"
+}
+             // To access these values we can use a new method in which we store the keys in an object which is 
+                  // refering to the object in wich that is in.
+          // ********** ITS CALLED Object or array DESTRUCTURING ********************************// 
+          // it means we can write the keys name inside an object curly brackets {keyname} Ex 
+          // const {Oppenentteam} = Euros2024  console.log(Oppenentteam)     
 
+const {Teamname} = Euros2024
+console.log(Euros2024);
+console.log(Teamname);
 
-
-
+//     const {Teamname : Team} = Euros2024  We can also change name or store the big named variable into a smaller 
+//     named variable
 
 
 
