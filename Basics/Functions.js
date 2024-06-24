@@ -15,8 +15,9 @@ console.log("Result : ", result);   // This shows that the result variable is un
                 // ******** IMPORTANT RULE **************//
 //Now when we use console.log() inside a function and store that operation inside the console.log() in an different
 // Variable which is outside of the function then that variable is undefined
-// You can only store the value of that operation into an third variable when inside the function we haveused return
-// instead of console.log()
+// You can only store the value of that operation into an third variable which should be
+//  inside the function we have used return instead of console.log()
+
 
 function DivtwoNumbers(num1, num2) {
     return num1 % num2
@@ -26,8 +27,9 @@ console.log(DivAnswer);
 
 function loginUserMessage(username) {
     if(username === undefined)  {   // OR we can also write ********* if(!username) {} ****************
-                return("Please , Enter the user name")   //And once this return is executed then after any other return
-    }                               //          is neglected or ignored  straight up
+                return("Please , Enter the user name")   //So if loop compares the username with and if it true then 
+                                                         //this return condition will applicable
+    }  
     
     return `${username}, Just logged in `   // here we used string interpolation to don't waste time
 
@@ -35,7 +37,7 @@ function loginUserMessage(username) {
 
 console.log(loginUserMessage("Shanjin"));
 console.log(loginUserMessage());  // But when you left the paranthesis empty then it's an undefined datatype
-            // therefore we use help of an loop and match if there is empty space then it's an ndefined
+            // therefore we use help of an loop and match if there is empty space then it's an undefined
                
             // ********** REST operator (...num1) it makes any number given in random manner stores in an array
 
@@ -85,18 +87,18 @@ console.log(ReturnSecondvalue(MynewArray));
 // Whatever you write outside of this brackets are called global scope i.e. there scope is globally available
 // And this which are written inside is block scope and hese things can't be accessed by outside refering to it
 
-let a = 48
-let b = 74   // This are global scope values assigned to a,b,c
-let c = 83
+// let a = 48
+// let b = 74   // This are global scope values assigned to a,b,c
+// let c = 83
 
-if (true) {
- let b = 23
- const c = 84                               //This is called block scope
-console.log("Inner scope's value =", b,c);
-}
-console.log(a);
-console.log(b);
-console.log(c);
+// if (true) {
+//  let b = 23
+//  const c = 84                               //This is called block scope
+// console.log("Inner scope's value =", b,c);
+// }
+// console.log(a);
+// console.log(b);
+// console.log(c);
    // ***** this scope environment in this node.js and in browser's inspect console is different ******** \\
 
 // Scope's of Function inside functions.
@@ -134,7 +136,7 @@ const Boredlife = function(num1) {
 console.log(Boredlife(4)) // here the disadvange is that you can't write this printing statement before function declaration
 
 // +++++++++++++++++++++ Understanding this and arrow function +++++++++++++++++++++++++++++++++++
-// this.name is basically we use this to refer to current situation inside an object or function etc
+//this.name is basically we use this to refer to current situation inside Only in Object not in Functions
 const Banks = {
     Username : "Sameer yadav",
     AccountId : 385429027312,
@@ -143,29 +145,53 @@ const Banks = {
     }
 }
 
-Banks.Welcomemessage() // this prints Sameer yadav , Thank you for opening account and being apart of our family
-// but can change the current value 
-Banks.Username = "Sana Malik"
-Banks.Welcomemessage() // this print the value changed
-                     // Now main Observe if we write console.log(this) inside the function 
-                     // and outside the function
-                     
+// Banks.Welcomemessage() // this prints Sameer yadav , Thank you for opening account and being apart of our family
+// // but can change the current value 
+// Banks.Username = "Sana Malik"
+// Banks.Welcomemessage() // this print the value changed
+                     // Now main Observe if we write console.log(this) inside the object    
+                     // and outside the Object
 
+console.log(Banks);
+console.log(this); // If we observe the output it shows {empty} but same code if we run in browsers console
+ // Then we see "Window" as a default value; this is because Javascript is an browser based language 
+                      // Therefore the most global object in browser is "windows" object its asked in interviews
 
+// Difference btw Function and Arrow Function is that we remove the function keyword and write => after ()
+const chain = function() {
+    Naav = "Shushruth"
+    console.log(this.Naav);  // As we know that this operator doesn't work in functions and shows {empty}
+    console.log(this);  // Same case as above
+}
+chain()
 
+// Arrow Function
+const Chain = () => {
+    Naam = "Asleem"
+    console.log(this.Naam); // this doesn't gets executed
+}
+console.log(this.Naam); // Outside this operator becomes undefined
+Chain()
+                      // SUMMARY OF THIS OPERATOR IN NORMAL AND ARROW FUNCTions
+// if console.log(this) is written inside the normal or arrow function it states as undefined
+// But we write console.log(this) outside the normal or arrow function it states as {} or empty object
+// On otherhand console.log(this.Any key from object or Function) then it will get executed
 
+// ***************************** EXPLICT arrow Function *********************************
+const Location = (loca1, loca2) => {  // In explict we use {} and return in arrow function
+    return loca1 + loca2
+}
 
+console.log(Location("Fin","land"));
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IMPLICT ARROW FUNCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const Locat = (loca1, loca2) => (loca1 + 2* loca2)
+console.log(Locat(3, 5)); // In implict we remove this {} and use ()
 
-
-
-
-
-
-
-
-
-
+// Same thing can be done in objects as well but inside we have to use {}
+                // ({here you have to mention any operation})
+const Loca = (uSername) => ({uSername : "Daniel"})
+console.log(Loca()); // here without return keyword we can make object with arrow function
 
 
 
