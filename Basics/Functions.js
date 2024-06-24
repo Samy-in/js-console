@@ -149,7 +149,7 @@ Banks.Username = "Sana Malik"
 Banks.Welcomemessage() // this print the value changed
                      // Now main Observe if we write console.log(this) inside the function 
                      // and outside the function
-console.log("hi");
+                     
 
 
 
