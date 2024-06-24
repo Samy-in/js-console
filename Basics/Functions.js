@@ -133,6 +133,40 @@ const Boredlife = function(num1) {
 }
 console.log(Boredlife(4)) // here the disadvange is that you can't write this printing statement before function declaration
 
+// +++++++++++++++++++++ Understanding this and arrow function +++++++++++++++++++++++++++++++++++
+// this.name is basically we use this to refer to current situation inside an object or function etc
+const Banks = {
+    Username : "Sameer yadav",
+    AccountId : 385429027312,
+    Welcomemessage : function () {
+        console.log(`${this.Username} , Thank you for opening account and being apart of our family`);
+    }
+}
+
+Banks.Welcomemessage() // this prints Sameer yadav , Thank you for opening account and being apart of our family
+// but can change the current value 
+Banks.Username = "Sana Malik"
+Banks.Welcomemessage() // this print the value changed
+                     // Now main Observe if we write console.log(this) inside the function 
+                     // and outside the function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
