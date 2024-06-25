@@ -18,10 +18,10 @@ console.log(null >= 0);
 console.log(null <= "23");
 
 console.log(null == 0); // Which is false becoz Now this null is convert as string
-console.log(null == "");  // same Output
+console.log(null == "");  // same Output.
  
 // *********************Strict check = it checks all the parameters of an value like whether
-// its in same defined function or not
+// its in same defined function or not.
 
 console.log("2" === 2); // Here first it convert the string into a number and compares then as its an Strict Check so
-// it also check its datatype and its different so False
+// it also check its datatype and its different so False.
