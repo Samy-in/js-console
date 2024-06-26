@@ -118,14 +118,27 @@ val3 = null ?? undefined  // this ?? operator takes undefined as a safer option 
 console.log(val3);
 val4 = undefined ?? null // here ?? operator takes null as a safety measure
 console.log(val4);
+              // ************ To change variables name all together use ctrl + D. ***********
+// For literations
+for (let i = 0; i < 4; i++) {
+    const element = i; // this will straight print index values
+    console.log(element);
+}
+ // we can reuse this i becoz it has certain scope.
+for (let i = 0; i < 5; i++) {
+    // console.log(`Outer loop is : ${i}`);
+    for (let j = 0; j < 7; j++) {
+        // console.log(`inner loop is : ${j}`);
+        // console.log(`i = ${i} * j = ${j} is :`,i*j);
+    }
+}
 
+// for literation also used in arrays
+const myArray = ["Spam", "Sentry", "Abominator"]
 
+for (let i = 0; i < myArray.length; i++) {
+    const element = myArray[i];
+    console.log(element);
+}
 
-
-
-
-
-
-
-
-
+// break keyword stop the loop and continue keyword skips one literation and then let rest printed.
