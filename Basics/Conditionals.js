@@ -142,3 +142,18 @@ for (let i = 0; i < myArray.length; i++) {
 }
 
 // break keyword stop the loop and continue keyword skips one literation and then let rest printed.
+// While and do while loop
+// const Place = 10
+// while (Place <= 18) {
+//     console.log(`Places are : ${Place}`);
+//     continue;
+// }
+
+// while iteration on array.
+let Dark_Heros = ["Daredevil", "Batman", "Punisher"]
+let arr = 0 // WE have to make different variable which starts from 0 to the array lenght of above array.
+while (arr < Dark_Heros.length) {
+    console.log(`Best Dark hero's are : ${Dark_Heros[arr]}`);
+    arr = arr + 1
+}
+
