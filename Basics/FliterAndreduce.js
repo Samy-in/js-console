@@ -47,12 +47,12 @@ console.log(NewData);
 //++++++++++++++++++++++++++++++++++ Reduce Operator ++++++++++++++++++++++++++++++++++++++++++
 //Used in shopping carts and all to perform calculations
 // in this reduce we have two main varaible .i.e. Acceptor/Accumulator and CurrentValue.
-const mynums = [1, 2, 3]
+const mynums = [1, 2, 3, 4]
 
 const myTotal = mynums.reduce( function (Acceptor, Current_Value) {
     console.log(`Accumulator ${Acceptor} and Current value ${Current_Value}`);
     return Acceptor + Current_Value
-} , 1) // Here after the condition we give the initializer number to start with
+} , 0) // Here after the condition we give the initializer number to start with
 
 //So in Accumulator after displaying the first initial value then it gets add with Current value and the second 
 // value to start with is that added value itself
@@ -61,11 +61,25 @@ const myTotal = mynums.reduce( function (Acceptor, Current_Value) {
 // Third acceptor is 2+2= 4 and Current value is 3.
 
 // now Same can be done in Implict arrow Function which is short.
-const MyTotal_bill = myNums.reduce( (Acc, Curr_val) => Acc + Curr_val, 1) // here we need to mention initialvalue
-console.log(MyTotal_bill);
+const MyTotal = myNums.reduce( (Acceptor, Current_Value) => Acceptor + Current_Value, 1) // here we need to mention initialvalue
+console.log(MyTotal);
 
+const ShoppingCart = [
+    {
+        item_name : "BaseBall Bat",
+        Quantity : 2
+    },
+    {
+        item_name : "Stationary",
+        Quantity : 12
+    },
+    {
+        item_name : "Car suspenser",
+        Quantity : 1
+    }
+]
 
-
-
-
-
+// We need to add all the items in this cart
+const PricetoPay = ShoppingCart.reduce((Acc, item) => Acc + item.Quantity, 0)
+// Remember = here item means the objects inside the array.
+console.log(PricetoPay);
