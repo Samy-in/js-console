@@ -1,0 +1,31 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dom and Provisionsy</title>
+</head>
+<body style="background-color: #212121 ; color: rgb(78, 122, 160), 75 ;">
+    
+</body>
+<script>  // Here we are learning how we can create an element,
+   const Elem = document.createElement('div')
+   console.log(Elem);
+   // On this element called div we can add classname or id to make it memerable.
+   div.classname = "Hero"
+   div.id = Math.round(Math.random() * 10 + 1) // Here,We created a Random number which will get roundoff by math.round
+   // And to avoid 0 value cases we added 1.
+   div.setAttribute("title", "Hard Title")
+   div.style.backgrounColor = "Blue"
+   div.style.padding = "13px"
+   // We did all this but its not showing on the webpage = its because this div is saved in memory so we are making changes in memory
+   // To see the changes in website we will add this to are parent site.
+   // div.innerText = "Hard journey but worth it" this creates lot of on and fro code so instead we write below
+   const AddText = document.createTextNode("Hard journey but worth it")
+   div.appendChild(AddText) // this append function adds this text into the div.
+
+   // Now we are attaching this div to the main document page and we can see the result.
+   document.body.appendChild(div)
+</script>
+ </html>
