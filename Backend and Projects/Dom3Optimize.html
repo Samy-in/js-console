@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="Language">
+         <li>Javascript</li>
+    </ul>            
+</body>
+  <script>  // REMEMBER Using .innerHTML to change the value of any Value is unneccessary and Not sufficient.
+                     // ******** THis way is Optimized way to append the element ******************* \\
+    // Now we know how to create an element and list item to store it in variable then we append tha child to the parent document.
+    // So What if we make this as a Function?
+    function addLanguage(Langterm) {
+        const li = document.createElement('li')  // this is list item created .
+        li.appendChild(document.createTextNode(Langterm))  // From previous Dom2.html we can seperate this li.appendchild()
+        // And store this document.CreateTextNode(Langterm) into a variable called addText.
+        document.querySelector('.Language').appendChild(li) //then we selected a class of language where we attached this li.
+    }
+    addLanguage('Python')
+    addLanguage('PHP')
+    addLanguage('Golang')
+                                 // Now to edit values for this class.
+    // To edit first we have to find things.
+    const SecondLang = document.querySelector('li:nth-child(2)') //This li:nth-Child(2) means we are changing the number 2 value.
+    // Now we have selected the value to change now we need to store it in a new variable and create an element.
+    const newli = document.createElement('li')
+    // Now we change the text.
+    newli.textContent = "Mojo"
+    // Now we changed the name and we have also declared that SecondLang is appended due to querySelector.
+    // So now we just need to Replace this Secondlang to newli to get the name printed.
+    SecondLang.replaceWith(newli)
+
+    // Now the above is fine and there are other ways too. So Method 2. by outerHTML
+    const Firstlang = document.querySelector('li:First-child') //this means we are changing the First child.
+    const Firstlang1 = document.querySelector('li:nth-child(3)')
+    Firstlang.outerHTML = '<li>Typescript</li>'
+    Firstlang1.outerHTML = '<li>Javascript</li>' // here also chaned third element.
+
+    //                       TO remove any Dom value
+    const Lastlang = document.querySelector('li:Last-child')
+    Lastlang.remove() // This remove the Golang.
+                   // DOM is Finished.
+  </script>
+</html>
