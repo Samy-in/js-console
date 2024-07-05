@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Html Events </title>
+</head>
+<body style="background-color: rgb(8, 4, 4); color: aliceblue;" >
+    <h2> Image Source</h2>
+    <div>
+        <ul id = "images">
+            <li><img width = "200px" id= "Photoshop" src="https://images.pexels.com/photos/361339/pexels-photo-361339.jpeg?auto=compress&cs=tinyrgb&w=1600&lazy=load" alt="Photoshop"></li>
+            <li><a style="color: azure;" href="https://google.com" id="google"> Google </a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // We are adding an function called onclick. which works when we click the img and this is the most optimized code.
+    // Method 1.)
+    // document.getElementById('Photoshop').onclick = function(){
+    //     alert ("You clicked Photoshop");
+    // }
+    // Method 2.) this has more features thann on click function.
+    document.getElementById('Photoshop').addEventListener('click', function(e){
+        console.log("You clicked Photoshop");
+        
+    }, false)
+    // We need to understand type of event, timestamps of events, defaultPrevented, target , toElements
+    // And the most imp 'scrElement'
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log('Clicked inside the ul');
+        e.stopPropagation()
+    }, false)
+    // ******************* Event Propogation ********************************************
+    // also Means event bubbling = it states that like a bubble who expands from smaller surface to bigger just like 
+    // this event bubble takes smaller event condition to bigger. i.e. DON't FORGEt TO WRITE FALSE OR TRUE at the end
+    // After the eventlistener.
+    // Shortcut = when its False then it's called event bubbling
+    // but when it's True then it's called event capturing. means it starts from upwards to down layer where as bubbling 
+    // starts from down to upwards layer.
+    document.getElementById('google').addEventListener('click', function (e){
+       e.preventDefault() // if we dont want to stop the bubbling use stoppropogation
+       console.log('You clicked google');
+    }, false)
+</script>
+</html>
