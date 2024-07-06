@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Async Project </h1>
+    <button id="Click me"> Rukho </button>
+</body>
+<script>
+    const Myfunction = function () {
+        console.log("Mongodb is database handler language");
+    }
+    const Change = function (){
+        document.querySelector('h1').innerHTML = 'Change is the Only constant.'
+    }
+    
+     // this settimeout need to have a handler or no named call back function or a reference of an variable/function.
+    //which contain the condition or 
+    // this process will print after the time mentioned that is 2 miliseconds and get printed once.
+    // there is setInterval() which has same call back function but we have specify an interval in which the code
+    // gets executed on repeat.
+    // Now to stop this setTimeout we use Cleartimeout() and for setInterval use ClearTimeOut()
+    // We can store this setTimeout in a variable and give the reference to the clearTimeOut()
+    const Chase_me = setTimeout(Myfunction,2000)
+    document.querySelector('#Click me').addEventListener('click', function (){
+        clearTimeout(Chase_me);
+        console.log("STOPPED");
+    })
+</script>
+</html>
