@@ -40,7 +40,27 @@
     // starts from down to upwards layer.
     document.getElementById('google').addEventListener('click', function (e){
        e.preventDefault() // if we dont want to stop the bubbling use stoppropogation
-       console.log('You clicked google');
+       alert('You clicked on google')
     }, false)
+
+    // Task 1= Now we have remove the images when click on them.
+     // Step 1. first we select the class or <ul> and id inside it.
+        document.querySelector('#images').addEventListener('click', function (events) {
+            if(events.target.tagname === 'IMG'){ // here we are checking whether the clicked item is image or <li>
+                console.log(events.target.id);
+                console.log(events.target.parentNode);
+     // this target function will give us the whole image tag of the image we clicked on.
+    // But we just don't want to remove the image link but the whole <li> tag which has that image link, so to select that use .parentNode
+        // on events.target;
+        // Step 2. then we store this event that you applied the parentNode into a variable.
+                 let RemoveImage = events.target.parentNode  
+                 RemoveImage.remove()  
+    // ****** but this parentNode function has a downside that its only used for images not for website links like the Example 
+    // we used, because if we click on the website link in output since we are removing items and if we click on the link since the link of  
+    // website is inside the <li> tag and we are using the parent tag then parent of <li> is <ul> . that means we are erasing the whole unordered list.      
+    // So to Correct this we have to put a checking loop that to check whether the item which we clicked is (li or image).
+    // To know the tagname of the item we clicked use .target.tagname
+    }
+})
 </script>
 </html>
