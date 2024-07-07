@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Async 2 Project </h1>
+    <button id = "Start"> start</button>
+    <button id = "Stop"> Stop</button>
+</body>
+<script>
+    //  // Now setinterval() this keeps printing things but Special feature is that it can also have a parameter added to it
+    //  const SayDate = function (str){
+    //     console.log(str, Date.now()); // here we are printing the value of the string parameter and time at each second.
+    // }
+    // const IntervalId = setInterval(SayDate, 2000 ,"OOLaaa") // this string parameter will get printed many times.
+    // clearInterval(IntervalId)
+    
+    // Now Q) we have press start which keeps print a statement and as soon as we press stop the print should stop.
+    const RepeatOccurence = function (){
+        
+        document.querySelector('#Start').addEventListener('click', function (){
+            console.log('keep printing', Date.now());
+            
+        })
+    }
+    
+    const Stopit = function(){
+        console.log("Printing has Stopped");}
+        
+    const Running =setInterval(RepeatOccurence)
+    document.querySelector('#Stop').addEventListener('click', Stopit)
+    clearInterval(Running)
+
+</script>
+</html>

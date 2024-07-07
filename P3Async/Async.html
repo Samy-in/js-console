@@ -26,8 +26,9 @@
     // We can store this setTimeout in a variable and give the reference to the clearTimeOut()
     const Chase_me = setTimeout(Myfunction,2000)
     document.querySelector('#Click me').addEventListener('click', function (){
-        clearTimeout(Chase_me);
         console.log("STOPPED");
+        clearTimeout(Chase_me);
     })
+    
 </script>
 </html>
