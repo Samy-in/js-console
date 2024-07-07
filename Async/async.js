@@ -30,3 +30,11 @@
 //        |--------> Fetch()--------------------|
 //                 Same work is done in this like it will pass it to task queue
 //                 but fetch has high priority than other functions.
+
+// Asychronous function which does not stops the main branch or main single thread.
+// setTimeout() this print anything only once.
+//  clearTimeout() it stop this above function.
+// setInterval() this print in loop but in a intervals of seconds whic we have to mention there.
+// clearInterval() this stops the above function.
+// 
+// 
