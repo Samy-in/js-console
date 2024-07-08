@@ -16,6 +16,30 @@ Value	State	Description
 4	DONE	The operation is complete.
 </body>
 <script>
+    const UrlStored = "https://api.github.com/users/Samy-in"
+    const RequestData = new XMLHttpRequest()
+          RequestData.open('GET', UrlStored) //Now we stored a request in open() function then we have to call it by send()
+        RequestData.onreadystatechange = function () {
+            console.log(RequestData.readyState);
+            // Now to do work on specific state like suppose at stage 4 we have to print a variable so that variable is 
+            // treated as a response text from system.
+            if (RequestData.readyState === 4) {
+               // we are storing this responsetext so that we can access the objects inside it like followers,files etc
+               // but huge problem is system always send the response in string form so we have to convert it in object form
+               // to get access to further functions.
+               // so we use JSON.parse() which converts it in object, there are other methods too like convert to number so we
+               // use Number.parse()
+                const ResponseInstring = JSON.parse(this.responseText)
+                 console.log(typeof ResponseInstring);
+                console.log(ResponseInstring.followers); // here we use this keyword to let system know that we are talking about this instance.
+                
+            }
+        }
+
+          RequestData.send() // Now if write anything it available in console but if we want to check the values like above mentioned tables
+   // We use onreadystatechange() to trace readystate() values while requesting and
+   // it requires a function in which its value is carried.
     
+
 </script>
 </html>
