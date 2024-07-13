@@ -67,3 +67,9 @@ console.log(Autocars);
 // console.log(Autocars instanceof Maker); // this is not correct you can ask object inside an object is an instance or not
 console.log(Autocars instanceof Cars);  // Expected value: true
 console.log(Autocars instanceof Object); // Expected value: true
+
+// Updates were rejected because the remote contains work that you do not
+// hint: have locally. This is usually caused by another repository pushing to
+// hint: the same ref. If you want to integrate the remote changes, use
+// hint: 'git pull' before pushing again.
+// hint: See the 'Note about fast-forwards' in 'git push --help' for details.
