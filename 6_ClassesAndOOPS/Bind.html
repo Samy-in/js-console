@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> React.js</title>
+</head>
+<body>
+    <button> Button Clicked </button>
+    
+</body>
+<script>
+    class React {
+        constructor (){
+            this.library = library;
+            this.server = "https://localhost:300";
+            // the goal of this code is to create a object called react and as well as a method handleClick() which
+            // tells us that the button is clicked .
+
+            // but problem is this.server is not accessed because there is gap between the this.server in constructor and 
+            // this.server in handleClick so to bind it together we use .bind() on the current function and give the current 
+             // context which is"this"           
+            document.querySelector('button').addEventListener('Click', this.handleClick.bind(this));
+        }
+         handleClick() {
+            console.log(" The button is clicked");
+            console.log(this);
+        }
+    }
+</script>
+</html>
